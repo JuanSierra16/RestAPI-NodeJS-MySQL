@@ -8,6 +8,8 @@ app.use(express.json())
 app.use(indexRoutes)
 app.use('/api', employeesRoutes)
 
+let x = 2; // borrar esto luego solo fue para probar
+
 app.use((req, res, next) => {
     res.status(404).json({
         message: 'endpoint not found'
